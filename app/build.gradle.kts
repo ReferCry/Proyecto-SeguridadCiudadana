@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,6 +8,7 @@ plugins {
 android {
     namespace = "com.example.proyecto_seguridadciudadana"
     compileSdk = 36
+    viewBinding; true
 
     defaultConfig {
         applicationId = "com.example.proyecto_seguridadciudadana"
@@ -45,4 +48,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.navigation.ui)
+
 }
