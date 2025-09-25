@@ -7,4 +7,65 @@
     android:layout_height="match_parent"
     tools:context=".Home_Activity">
 
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="278dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="160dp"
+        android:text="Únete a la comunidad"
+        android:textColor="@color/textWhite"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRegistrate"
+        android:layout_width="280dp"
+        android:layout_height="45dp"
+        android:text="Regístrate o Inicia sesión para continuar\nReporta incidentes y mantente seguro"
+        android:textColor="@color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.664"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBienvenida" />
+
+    <EditText
+        android:id="@+id/edtCorreo"
+        android:layout_width="351dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Ingresa tu Correo electrónico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegistrate" />
+
+    <Button
+        android:id="@+id/btnContinuarRegistro"
+        android:layout_width="344dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:text="Continuar"
+        android:textColor="@color/textWhite"
+        android:backgroundTint="@color/primaryBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreo" />
+
+    <TextView
+        android:id="@+id/txtMiniTil"
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Safe Zone"
+        android:textColor="@color/textWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:autoSizeTextType="uniform"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
