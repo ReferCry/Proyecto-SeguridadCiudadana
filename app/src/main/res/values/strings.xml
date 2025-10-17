@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Proyecto-SeguridadCiudadana</string>
+
+    <string name="facebook_app_id">4076365979248527</string>
+    <string name="fb_login_protocol_scheme">fb4076365979248527</string>
+    <string name="facebook_client_token">42c72a421a3ca80536fa688170448a58</string>
+
+
 </resources>

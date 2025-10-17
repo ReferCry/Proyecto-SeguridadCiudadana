@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1055738584903",
+    "project_id": "prueba-test-bd591",
+    "storage_bucket": "prueba-test-bd591.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055738584903:android:7bb010d25a716681bcb662",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_seguridadciudadana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055738584903-o84ki36vp2r1h9u6m3j43t2evkqfhktm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyecto_seguridadciudadana",
+            "certificate_hash": "40e1aaf0d3cca208389a8ec370b42b62b9cf3d9b"
+          }
+        },
+        {
+          "client_id": "1055738584903-o3lebl0k48ngv3p04jtu2l12uhvtd772.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZPtax29T4HmW4q01RpxmT3DxsGcDz4fo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055738584903-o3lebl0k48ngv3p04jtu2l12uhvtd772.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

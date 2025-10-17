@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_Activity">
+
+    <TextView
+        android:id="@+id/txtMiniTil"
+        android:layout_width="105dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Safe Zone"
+        android:textColor="@color/textWhite"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtBienvenida"
+        android:layout_width="278dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="160dp"
+        android:text="Únete a la comunidad"
+        android:textColor="@color/textWhite"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtRegistrate"
+        android:layout_width="280dp"
+        android:layout_height="45dp"
+        android:text="Regístrate o Inicia sesión para continuar\nReporta incidentes y mantente seguro"
+        android:textColor="@color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.633"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBienvenida" />
+
+    <EditText
+        android:id="@+id/edtCorreo"
+        android:layout_width="351dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:hint="Ingresa tu Correo electrónico"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRegistrate" />
+
+    <!-- NUEVO: campo contraseña inicialmente oculto -->
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="351dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Ingresa tu Contraseña"
+        android:inputType="textPassword"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtCorreo" />
+
+    <!-- IMPORTANTE: este botón ahora depende de edtPassword -->
+    <Button
+        android:id="@+id/btnContinuarRegistro"
+        android:layout_width="344dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primaryBlue"
+        android:text="Continuar"
+        android:textColor="@color/textWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword" />
+
+    <!-- NUEVO: botón para ir a registro -->
+    <Button
+        android:id="@+id/btnIrRegistro"
+        android:layout_width="344dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="Registrarme"
+        android:textColor="@color/textWhite"
+        android:backgroundTint="@color/primaryBlue"
+        app:layout_constraintTop_toBottomOf="@id/btnContinuarRegistro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="También puedes iniciar con:"
+        android:textColor="@color/textWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnIrRegistro" />
+
+    <LinearLayout
+        android:id="@+id/btnGoogle"
+        android:layout_width="299dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_google_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtContinuar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_googlev2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Iniciar sesión con Google"
+            android:textColor="@color/textWhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btnFacebook"
+        android:layout_width="298dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_facebook_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGoogle">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="38dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_facebook" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Iniciar sesión con Facebook"
+            android:textSize="14sp"
+            android:textColor="@color/textWhite" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -49,5 +50,19 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.navigation.ui)
+    implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.android.gms:play-services-auth:21.4.0")
+
+    // Credential Manager + helper de Google ID (para Sign in with Google moderno)
+    implementation("androidx.credentials:credentials:1.5.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.5.0") // compat <= Android 13
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1") // ver doc oficial
+
+    // Facebook Login
+    implementation("com.facebook.android:facebook-login:latest.release")
+
+    // Lifecycle (recomendado para manejo de UI y estados)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.4")
 
 }
