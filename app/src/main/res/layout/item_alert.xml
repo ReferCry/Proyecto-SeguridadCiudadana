@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#1A1A1A"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header: Tipo + Tiempo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Emoji del tipo -->
+            <TextView
+                android:id="@+id/txtAlertEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚨"
+                android:textSize="32sp" />
+
+            <!-- Info principal -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtAlertSubtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Robo"
+                    android:textColor="@color/textWhite"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtAlertUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reportado por: Usuario"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Badge de tiempo -->
+            <TextView
+                android:id="@+id/txtAlertTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/badge_time_background"
+                android:padding="6dp"
+                android:text="5 min"
+                android:textColor="@color/textWhite"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Dirección -->
+        <TextView
+            android:id="@+id/txtAlertAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="📍 Calle Principal 123, Lima"
+            android:textColor="@color/darker_gray"
+            android:textSize="13sp" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="12dp"
+            android:background="#333333" />
+
+        <!-- Estado de validación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Validación:"
+                android:textColor="@color/darker_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtValidationScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ 5  |  ❌ 2"
+                android:textColor="@color/textWhite"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Badge de estado -->
+        <TextView
+            android:id="@+id/txtValidationStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/badge_pending_background"
+            android:padding="6dp"
+            android:text="PENDIENTE"
+            android:textColor="@color/textWhite"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <!-- Botones de validación -->
+        <LinearLayout
+            android:id="@+id/layoutValidationButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnValidateTrue"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="✅ Es Verdad"
+                android:textColor="@color/textWhite"
+                android:backgroundTint="#4CAF50"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnValidateFalse"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="❌ Es Falso"
+                android:textColor="@color/textWhite"
+                android:backgroundTint="#F44336"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

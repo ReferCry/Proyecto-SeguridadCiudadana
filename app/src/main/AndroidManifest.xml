@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <application
         android:allowBackup="true"
@@ -13,42 +16,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoSeguridadCiudadana">
-        <activity
-            android:name=".Home_Activity"
-            android:exported="false"
-            android:label="Home" />
-        <activity
-            android:name=".Report_activity"
-            android:exported="false" />
-        <activity
-            android:name=".Notice_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Login_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Register_Activity"
-            android:exported="false"
-            android:label="Registro" />
 
+        <!-- 🆕 NUEVO: Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <!-- Activities existentes -->
+        <activity android:name=".Home_Activity" android:exported="false" android:label="Home" />
+        <activity android:name=".Report_activity" android:exported="false" />
+        <activity android:name=".Notice_Activity" android:exported="false" />
+        <activity android:name=".Login_Activity" android:exported="false" />
+        <activity android:name=".Register_Activity" android:exported="false" android:label="Registro" />
+
+        <!-- 🆕 NUEVO: Map Activity -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".MapActivity"
+            android:exported="false"
+            android:label="Mapa de Alertas" />
+
+        <!-- 🆕 NUEVO: Alerts Activity -->
+        <activity
+            android:name=".AlertsActivity"
+            android:exported="false"
+            android:label="Alertas Activas" />
+
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-
+        <!-- Facebook activities -->
         <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
-        <activity
-            android:name="com.facebook.CustomTabActivity"
-            android:exported="true">
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -57,7 +61,16 @@
             </intent-filter>
         </activity>
 
+        <!-- FCM Service -->
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
+        <!-- Facebook metadata -->
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
     </application>
